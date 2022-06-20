@@ -31,7 +31,7 @@
                         <a class="nav-link {{Route::currentRouteName() === 'home' ? 'selected' : ''}}" href="{{route('home')}}">Home <span class="visually-hidden">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{Route::currentRouteName() === 'characters' ? 'selected' : ''}}" href="{{route('characters')}}">Characters</a>
+                        <a class="nav-link {{Route::currentRouteName() === 'characters' ? 'selected' : ''}}" href="{{route('characters.index')}}">Characters</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{Route::currentRouteName() === 'comics' ? 'selected' : ''}}" href="{{route('comics')}}">Comics</a>

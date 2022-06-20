@@ -22,12 +22,12 @@ Route::get('/', function () {
 
 
 
-Route::get('/characters', function () {
-    $name = Route::currentRouteName();
-    /* dd($name); */
+// Route::get('/characters', function () {
+//     $name = Route::currentRouteName();
+//     /* dd($name); */
     
-    return ('characters');
-})->name('characters');
+//     return ('characters');
+// })->name('characters');
 
 Route::get('/comics', function () {
     $name = Route::currentRouteName();
@@ -93,7 +93,7 @@ Route::get('/shop', function () {
 })->name('shop');
 
 
-Route::get('/{id}', function($id){
+Route::get('/comics/{id}', function($id){
     
     $comics = config('comics');
     /* dd(count($comics));
@@ -109,3 +109,6 @@ Route::get('/{id}', function($id){
     }
 
 }) -> name ('comics.show');
+
+
+Route::resource('characters', 'Guest\CharacterController');

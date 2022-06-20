@@ -21,7 +21,7 @@
                 @foreach ($comics as $index => $comic)
 
                 <div class="col">
-                    <a href="{{route('comics.show', $index)}}" class="text-decoration-none">
+                    <a href="{{ route('comics.show', $index ) }}" class="text-decoration-none">
                         <div class="card py-3 border-0">
                             <img class="card-img-top" src="{{$comic['thumb']}}" alt="{{$comic['series']}}">
 
