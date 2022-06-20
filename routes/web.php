@@ -112,3 +112,4 @@ Route::get('/comics/{id}', function($id){
 
 
 Route::resource('characters', 'Guest\CharacterController');
+Route::resource('/admin/characters', 'Admin\CharacterController');
