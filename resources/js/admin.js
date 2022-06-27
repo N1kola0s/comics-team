@@ -28,6 +28,5 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  */
 
 const app = new Vue({
-    el: '#app',
-    render: h => h(App) // mostriamo App all'avvio di Vue
+    el: '#root',
 });
