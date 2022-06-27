@@ -7,7 +7,7 @@
 </template>
 
 <script>
-
+ /* prova */
 export default {
     name: 'App',
     components: {}
