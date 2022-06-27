@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -113,3 +114,13 @@ Route::get('/comics/{id}', function($id){
 
 Route::resource('characters', 'Guest\CharacterController');
 Route::resource('/admin/characters', 'Admin\CharacterController');
+
+Auth::routes();
+
+Route::middleware('auth')->namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
+ Route::get('/', 'HomeController@index')->name('dashboard');
+});
+
+Route::get("{any?}", function () {
+    return view("guest.home");
+})->where("any", ".*");
